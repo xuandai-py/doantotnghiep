@@ -20,6 +20,9 @@ public class TrangChuController {
         return "trangchu";
     }
 
+
+    // test
+
     @RequestMapping("/login")
     public String login(){
         return "login";
