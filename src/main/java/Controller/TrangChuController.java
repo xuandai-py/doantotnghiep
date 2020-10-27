@@ -1,30 +1,36 @@
 package Controller;
 
-import Entity.Emloyee;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.GetMapping;
+
 
 
 @Controller
 public class TrangChuController {
 
-    @RequestMapping("/")
+  /*  @RequestMapping("/")
     @ResponseBody
     public String viewTrangChu(){
         ApplicationContext context = new ClassPathXmlApplicationContext("Ioc.xml");
         Emloyee emloyee = (Emloyee) context.getBean("Employee");
         emloyee.getName();
-        return "trangchu";
+        return "view";
+    }*/
+
+    @GetMapping("/index")
+    public String index(){
+        return "index";
+    }
+
+    @GetMapping("/")
+    public String viewON(){
+        return "layout/view";
+    }
+    
+    @GetMapping("/demo")
+    public String demo() {
+    	return "demo";
     }
 
 
-    // test
-
-    @RequestMapping("/login")
-    public String login(){
-        return "login";
-    }
 }
