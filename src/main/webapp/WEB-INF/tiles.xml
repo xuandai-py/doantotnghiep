@@ -15,5 +15,5 @@
 	<definition name="index" extends="master">
 		<put-attribute name="body" value="/WEB-INF/views/index.jsp"/>
 	</definition>
-
+	
 </tiles-definitions>
