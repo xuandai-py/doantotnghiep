@@ -1,6 +1,6 @@
 package controller;
 
-import entity.User;
+import entity.user;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,9 +47,9 @@ public class TrangChuController {
     public String temp(){
         String sql = "from user";
         Session session = sessionFactory.getCurrentSession();
-        List<User> list = session.createQuery(sql).getResultList();
+        List<user> list = session.createQuery(sql).getResultList();
 
-        for(User user : list){
+        for(user user : list){
             System.out.println("user: " + user.getUsername());
             
         }

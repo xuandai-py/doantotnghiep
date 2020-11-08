@@ -2,7 +2,7 @@ package dao;
 
 
 import daoImpl.UserImpl;
-import entity.User;
+import entity.user;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ public class UserDAO implements UserImpl {
 
         Session session = sessionFactory.getCurrentSession();
         try {
-            User user = (User) session.createQuery("from user where username='" + userName+ "' and password='"+password + "' and roleID='" + roleID +"'").getSingleResult();
+            user user = (user) session.createQuery("from user where username='" + userName+ "' and password='"+password + "' and roleID='" + roleID +"'").getSingleResult();
             if(user != null){
                 return true;
             } else {
